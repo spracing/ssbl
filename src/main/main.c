@@ -400,7 +400,7 @@ static void MPU_Config(void)
   // the second stage bootloader does not need this protection.
 
   // disable all existing regions
-  for (uint8_t region = MPU_REGION_NUMBER0; region < MPU_REGION_NUMBER15; region++) {
+  for (uint8_t region = MPU_REGION_NUMBER0; region <= MPU_REGION_NUMBER15; region++) {
       MPU_InitStruct.Enable = MPU_REGION_DISABLE;
       MPU_InitStruct.Number = region;
       HAL_MPU_ConfigRegion(&MPU_InitStruct);
