@@ -58,7 +58,6 @@
 			<target name="SPRACINGH7EXTREME - build (DEBUG)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-j DEBUG=1 TARGET=SPRACINGH7EXTREME</buildArguments>
-				<buildTarget/>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
@@ -67,6 +66,14 @@
 				<buildCommand>make</buildCommand>
 				<buildArguments>-j DEBUG=1 TARGET=SPRACINGH7EXTREME</buildArguments>
 				<buildTarget>clean</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="SPRACINGH7EXTREME - build" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-j TARGET=SPRACINGH7EXTREME</buildArguments>
+				<buildTarget/>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
