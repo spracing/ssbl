@@ -64,8 +64,8 @@
 // configured via linker script when building binaries, usually 0x90000000 for memory mapped QSPI.
 extern uint8_t __quad_spi_start;
 
-#define FIRMWARE_OFFSET 0x00100000
-#define FIRMWARE_ADDRESS (&__quad_spi_start + FIRMWARE_OFFSET)
+#define FIRMWARE_OFFSET 0x00100000U
+#define FIRMWARE_ADDRESS ((uint32_t)(&__quad_spi_start) + FIRMWARE_OFFSET)
 
 QSPI_HandleTypeDef hqspi;
 
