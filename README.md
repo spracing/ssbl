@@ -20,7 +20,7 @@ IMPORTANT: See [Supported](#Supported-flash-chips) and [Unsupported](#Unsupporte
 
 The SSBL currently supports the following flash chips:
 
-* [W25Q128](https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&partNo=W25Q128JV) (W25Q128JVEIQ/W25Q128JVEJQ)
+* [W25Q128](https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&partNo=W25Q128JV) (W25Q128JVEIQ/W25Q128JVEJQ/W25Q128JVEIM/W25Q128JVEJM)
 
 Support for other flash chips is possible, but requires SP Racing bootloader *and* SSBL support, as the SP Racing bootloader must be able to boot the SSBL.
 
