@@ -182,7 +182,11 @@ void detectFlashAndEnableMemoryMap(void)
 
     W25q_readJedec(&hqspi, response);
 
-    bool haveJedecId = (response[0] == 0xEF && response[1] == 0x70 && response[2] == 0x18 );
+    bool haveJedecId = (
+            (response[0] == W25Q_MANUFACTURER_ID) &&
+            ((response[1] == W25Q_DEVICE_ID_1_IQ) || (response[1] == W25Q_DEVICE_ID_1_IM)) &&
+            (response[2] == W25Q_DEVICE_ID_2)
+            );
 
     if (!haveJedecId) {
         return;

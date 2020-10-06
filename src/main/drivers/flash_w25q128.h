@@ -26,6 +26,11 @@
 
 #include "stm32h7xx_hal.h"
 
+#define W25Q_MANUFACTURER_ID    0xEF //!< MF7 - MF0
+#define W25Q_DEVICE_ID_1_IQ     0x40 //!< W25Q128JV-IM - first part of ID15 - ID0 (4018h)
+#define W25Q_DEVICE_ID_1_IM     0x70 //!< W25Q128JV-IQ - first part of ID15 - ID0 (7018h)
+#define W25Q_DEVICE_ID_2        0x18 //!< W25Q128JV-Ix - second part of ID15 - ID0 (4018h or 7018h)
+
 // Device size parameters
 #define W25Q_PAGE_SIZE          256         //!< Bytes
 #define W25Q_SECTOR_SIZE        4096        //!< Bytes (4KB)
