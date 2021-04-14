@@ -85,14 +85,14 @@ TARGET_EXST_HASH_SECTION_FILE = $(BUILD_DIR)/exst_hash_section.bin
 LINKER_DIR = $(SRC_DIR)/main/link
 
 LINKER_SCRIPTS = \
-	$(shell find $(LINKER_DIR)/ -type f -name '*.ld')
+	$(shell find $(LINKER_DIR) -type f -name '*.ld')
 
 #
 # Main
 #
 
 MAIN_ALL_SOURCES = \
-	$(shell find $(SRC_DIR)/ -type f -name '*.c')
+	$(shell find $(SRC_DIR) -type f -name '*.c')
 
 MAIN_SOURCE_EXCLUDES = \
 	$(filter $(SRC_DIR)/main/target/%,$(MAIN_ALL_SOURCES))
@@ -154,7 +154,7 @@ HAL_SOURCES = \
 	$(HAL_DIR)/Src/stm32h7xx_ll_delayblock.c \
 
 ALL_HAL_SOURCES = \
-	$(shell find $(HAL_DIR)/ -type f -name '*.c')
+	$(shell find $(HAL_DIR) -type f -name '*.c')
 
 HAL_EXCLUDES = \
 	$(filter %_template.c,$(ALL_HAL_SOURCES))
